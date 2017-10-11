@@ -1,12 +1,10 @@
 
 rotate([180,0,0])
 scale(v= [-0.6,-0.6,-0.6]){
-    
     BuildPiece(holeHeight=9, holeRadius=7, connectorRadius=9, horizontalLeggsLength=7, verticalLeggsLength=13);
 }
 
 module BuildPiece(holeHeight, holeRadius, connectorRadius, horizontalLeggsLength, verticalLeggsLength){
-    
     Connector(holeRadius, holeHeight, connectorRadius);
     translate([0, horizontalLeggsLength+connectorRadius - ((connectorRadius-holeRadius)/2) , holeHeight/2])
     Leggs(horizontalLeggsLength, verticalLeggsLength, holeRadius/2.5);
